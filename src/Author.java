@@ -1,34 +1,36 @@
 import java.util.Objects;
 
 public class Author {
-    private String nameAuthor;
-    private String surnameAuthor;
+    private String name;
+    private String surname;
 
-    public Author (String nameAuthor,String surnameAuthor) {
-        this.nameAuthor = nameAuthor;
-        this.surnameAuthor = surnameAuthor;
+    public Author(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
     }
-    public String getSurnameAuthor(){ return this.surnameAuthor;}
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
 
     @Override
     public String toString() {
-        return "Author{" +
-                "nameAuthor='" + nameAuthor + '\'' +
-                ", surnameAuthor='" + surnameAuthor + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Author)) return false;
-        Author author = (Author) o;
-        return Objects.equals(nameAuthor, author.nameAuthor) && Objects.equals(getSurnameAuthor(), author.getSurnameAuthor());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(nameAuthor, getSurnameAuthor());
+        return " Автор " +
+                 name +
+                " " + surname ;
     }
 }
+
 

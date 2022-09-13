@@ -1,39 +1,46 @@
 import java.util.Objects;
 
 public class Book {
-    private String Author;
-    private String nameBook;
-    private int dateOfReleasing;
-    private String nameAuthor;
+    private String title;
+    private int publisherData;
+    private Author author;
 
-    public Book(String nameAuthor,String nameBook,int dateOfReleasing) {
-        this.Author = nameAuthor;
-        this.nameBook = nameBook;
-        this.dateOfReleasing = dateOfReleasing;
+    public Book(String title, int publisherData, Author author) {
+        this.title = title;
+        this.publisherData = publisherData;
+        this.author = author;
     }
-    public String getNameAuthor() {return this.Author;}
-    public String getNameBook(){return this.nameBook;}
-    public int getDateOfReleasing(){ return this.dateOfReleasing;}
 
-    public void setDateOfReleasing (int dateOfReleasing){
-        this.dateOfReleasing= dateOfReleasing;
+    public String getTitle() {
+        return title;
     }
-    
-    public String toString(){
-       return  "Автор"+ this.nameAuthor +"Название" +this.nameBook + "Дата выпуска"+this.dateOfReleasing;
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getPublisherData() {
+        return publisherData;
+    }
+
+    public void setPublisherData(int publisherData) {
+        this.publisherData = publisherData;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Book)) return false;
-        Book book = (Book) o;
-        return getDateOfReleasing() == book.getDateOfReleasing() && Objects.equals(Author, book.Author) && getNameBook().equals(book.getNameBook()) && getNameAuthor().equals(book.getNameAuthor());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(Author, getNameBook(), getDateOfReleasing(), getNameAuthor());
+    public String toString() {
+        return "Книга " +
+               title +
+                ", Дата публикации " + publisherData +
+                ", Автор " + author;
     }
 }
 

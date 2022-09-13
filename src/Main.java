@@ -4,39 +4,27 @@ import java.sql.SQLOutput;
 
 public class Main {
     public static void main(String[] args) {
-        String nameAuthor = "Michail";
-        String nameBook = "Heroy of our time";
-        int dateOfReleasing = 1923;
-        String surnameAuthor = "Lermontov";
+        Author author = new Author("Mikchail", "Lermontov");
+        Book heroyOfOurTime = new Book("Heroy of our time", 1956, author);
+        heroyOfOurTime.setPublisherData(1864);
+        System.out.println(author);
+        System.out.println(heroyOfOurTime);
+
+        Author fedorDostoevsky=new Author("Fedor","Dostoevsky");
+        Book idiot=new Book("Idiot",1687,fedorDostoevsky);
+        idiot.setPublisherData(1675);
+        System.out.println(fedorDostoevsky);
+        System.out.println(idiot);
+
+        Author michailBulgakov=new Author("Michail","Bulgakov");
+        Book master=new Book("Master",1847,michailBulgakov);
+        master.setPublisherData(1895);
+        System.out.println(michailBulgakov);
+        System.out.println(master);
+
 
 
     }
-
-    Book book = new Book("Michail", "Heroy of our time", 1923);
-
-    {
-
-        System.out.println("book.nameAuthor=" + book.getNameAuthor());
-        System.out.println("book.nameBook=" + book.getNameBook());
-        System.out.println("book.dateOfReleasing=" + book.getDateOfReleasing());
-        book.setDateOfReleasing(1922);
-    }
-
-    public void idiot() {
-        String author1 = "Fedor Dostoevsky";
-        String name1 = "Idiot";
-        int date1 = 1965;
-        Book idiot = new Book("Fedor Dostoevsky", "Idiot", 1965);
-        System.out.println("book.author1=" + book.getNameAuthor());
-        System.out.println("book.name1=" + book.getNameBook());
-        System.out.println("book.date1=" + book.getDateOfReleasing());
-        book.setDateOfReleasing(1922);}
-
-        String author2 = "Sergey Esenin";
-        String name2 = "Bereza";
-        int date2 = 1952;
-        Book Bereza = new Book("Sergey Esenin", "Beresa", 1952);
-
 }
 
 
