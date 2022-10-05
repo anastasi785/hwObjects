@@ -1,6 +1,7 @@
 import org.w3c.dom.ls.LSOutput;
 
 import java.sql.SQLOutput;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,6 +22,17 @@ public class Main {
         master.setPublisherData(1895);
         System.out.println(michailBulgakov);
         System.out.println(master);
+        System.out.println(author);
+        System.out.println(michailBulgakov);
+        System.out.println(fedorDostoevsky.equals(fedorDostoevsky));
+        System.out.println(idiot.equals(master));
+        System.out.println(idiot.hashCode());
+
+
+
+
+
+
 
 
 
